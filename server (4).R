@@ -21,7 +21,7 @@ server <- function(input, output, session) {
   library(reshape2)
   library(ggraph)
   
-  team_pdf_text <- read_document(file="/Users/janetdaniralarota/Desktop/Team 9 Final File.docx")
+  team_pdf_text <- read_document(file="C:/Users/matth/Desktop/Data Analyst/Text Analytics/GroupAssignmentPizza/Pizza Case Team 9 (1).docx")
   team_project <- c(team_pdf_text)
   a <- 47
   b <- 5
@@ -31,8 +31,8 @@ server <- function(input, output, session) {
       team_pdf_text[i,z]<- team_project[i*b+z-b]}}
   cust_stop <- data_frame(
     word=c("1","2","3","4","5","drink","person","depends","I","like","the","don't", "am", "really", "can't", "usually", "don't", "guess","i'm","it's","i’m","lot","don't","belong","pizza",
-           "don’t","it’s","pretty","people","that's","it's"),
-    lexicon=rep("custom", each=31)
+           "pretty","people","that's","it's"),
+    lexicon=rep("custom", each=29)
   ) #closing data_frame
   
   Q1 <- team_pdf_text$V1
